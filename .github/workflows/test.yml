@@ -2,11 +2,8 @@ name: docker-build
 on: push
 jobs:
   my-job:
-    runs: ubuntu-latest
-      using: 'docker'
-      image: 'Dockerfile'
+    runs-on: ubuntu-latest
     steps:
       - name: my-step
         run: |
-             ls -lha ../ 
-             docker build -t my-apache2 ../.
+             ls -lha ../../
