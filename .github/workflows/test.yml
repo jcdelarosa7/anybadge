@@ -13,4 +13,4 @@ jobs:
            docker build . --file Dockerfile --tag jcdel:$(date +%m-%d-%y)
            docker login -u jcdelarosa7 --password ${{ secrets.DOCKER_PASSWORD }}
            docker tag jcdel:$(date +%m-%d-%y) jcdel:first
-           docker push jcdel:$(date +%m-%d-%y)
+           docker push jcdel:first
