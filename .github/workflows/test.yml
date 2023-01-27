@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: docker build -t my-apache2 ../.
+        run: pwd 
+             docker build -t my-apache2 ../.
