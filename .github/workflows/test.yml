@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: |
-           docker build . --file Dockerfile --tag jcdel:$(date +%s)
-           docker tag jcdel:$(date +%s) jcdel:first
+           docker build . --file Dockerfile --tag jcdel:$(date +%m-%d-%y)
+           docker tag jcdel:$(date +%m-%d-%y) jcdel:first
            docker push new-repo:tagname
