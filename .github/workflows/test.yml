@@ -9,8 +9,7 @@ jobs:
           username: jcdelarosa7
           password: dckr_pat_DDRuMpd3wlzZurLxG2l265Td_1U
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: |
+    - run: |
            docker build . --file Dockerfile --tag jcdel:$(date +%m-%d-%y)
            docker tag jcdel:$(date +%m-%d-%y) jcdel:first
            docker push jcdel:$(date +%m-%d-%y)
