@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        working-directory: /home/runner/work/
         run: |
-             docker build ../../. --file Dockerfile --tag myapp
+             path: anybadge
+             Dockerfile: anybadge/Dockerfile.txt
+             docker build . --file Dockerfile --tag myapp
