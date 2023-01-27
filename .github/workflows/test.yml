@@ -7,4 +7,4 @@ jobs:
       - name: my-step
         run: |
              pwd 
-             docker build -t my-apache2 .
+             docker build -t my-apache2 ../../.
