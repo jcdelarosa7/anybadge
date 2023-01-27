@@ -6,7 +6,8 @@ jobs:
     steps:
     - uses: docker/login-action@v2
       with:
-          username: jcdelarosa7
+          registry: https://hub.docker.com/
+          userrname: jcdelarosa7
           password: dckr_pat_cByD2ViVpMSHCdRAql4l4EMsGpc
     - uses: actions/checkout@v2
     - run: |
