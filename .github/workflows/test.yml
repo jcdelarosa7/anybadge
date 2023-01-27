@@ -6,4 +6,4 @@ jobs:
     steps:
       - name: my-step
         run: |
-             ls -lha ../../
+             docker build . --file Dockerfile --tag myapp
