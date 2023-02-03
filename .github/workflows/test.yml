@@ -11,7 +11,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
     - uses: actions/checkout@v2
     - run: |
-           docker build . --file Dockerfile --tag jcdel:$(date +%m-%d-%y)
            docker login -u jcdelarosa7 --password ${{ secrets.DOCKER_PASSWORD }}
+           docker build . --file Dockerfile --tag jcdel:$(date +%m-%d-%y)
            docker tag jcdel:$(date +%m-%d-%y) jcdel:first
            docker push jcdel:first
